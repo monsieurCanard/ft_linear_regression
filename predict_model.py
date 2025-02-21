@@ -2,7 +2,7 @@ import sys
 import csv
 import numpy as np
 
-data_file = 'dataset/train_model_data.csv'
+data_file = 'dataset/output_train_data.csv'
 
 if len(sys.argv) < 2:
 	print("Usage: python modele.py <Car data kilometrage>")
@@ -20,4 +20,4 @@ with open(data_file, 'r') as file:
 		km_std = float(value[3])
 	
 	nb_km = (float(nb_km) - km_mean) / km_std
-	print("Estimated price: ", theta0 + (theta1 * float(nb_km)))
+	print("Estimated price: ", round(theta0 + (theta1 * float(nb_km)), 2))

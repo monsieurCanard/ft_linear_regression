@@ -1,7 +1,10 @@
 import csv
 import numpy as np
 
-with open('train_coef.csv', 'r') as file:
+base_file = 'dataset/data_train.csv'
+compare_file = 'dataset/output_train_data.csv'
+
+with open(compare_file, 'r') as file:
 	reader = csv.reader(file)
 	for value in reader:
 		theta0 = float(value[0])
@@ -9,7 +12,7 @@ with open('train_coef.csv', 'r') as file:
 		km_mean = float(value[2])
 		km_std = float(value[3])
 
-with open('data_train.csv', 'r') as file:
+with open(base_file, 'r') as file:
 	reader = csv.reader(file)
 
 	price = []

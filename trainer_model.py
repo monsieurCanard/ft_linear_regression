@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 train_file = 'dataset/data_train.csv'
-result_file = 'dataset/train_model_data.csv'
+result_file = 'dataset/output_train_data.csv'
 
 def train(theta0, theta1, km, price):
 	learning_rate = 0.01
@@ -36,7 +36,7 @@ with open(train_file, 'r') as file:
 	# Initialize theta0 and theta1 at Zero ! MANDATORY
 	theta1 = 0
 	theta0 = 0
-	for i in range(0, 10000):
+	for i in range(0, 100000):
 		theta0, theta1 = train(theta0, theta1, km, price)
 	
 	with open (result_file, 'w') as file:
