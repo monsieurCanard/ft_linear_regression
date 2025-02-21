@@ -1,4 +1,6 @@
-# ft_linear_regression
+<img src=https://github.com/monsieurCanard/42Graphics/blob/main/Abstract2.png>
+
+# ft_linear_regression 📉
 
 🚗💰 **Predict the price of a car**
 
