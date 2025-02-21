@@ -1,6 +1,6 @@
 # ft_linear_regression
 
-🚗💰 **Predict the price of a car based on its mileage**
+🚗💰 **Predict the price of a car**
 
 This project introduces you to machine learning by implementing a simple linear regression model to estimate a car's price based on its mileage. 📊
 
