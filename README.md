@@ -14,15 +14,19 @@
  ____|_________|____
 /                   \
 ```
+<div align="center">
+<h1>ft_linear_regression 🤖💰 </h1>
+</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python Version">
+  <img src="https://img.shields.io/badge/Status-Active-success.svg?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg?style=for-the-badge" alt="Platform">
+</p>
 
-# ft_linear_regression 📉
-
-
-🚗💰 **Bob's Used Car Price Predictor**
-
+##
 Rencontrez **Bob**, votre vendeur de voitures d'occasion préféré (et légèrement cynique) ! Depuis 20 ans, Bob achète des voitures et il a développé un sixième sens pour estimer leur prix. Ce projet implémente un modèle de régression linéaire qui reproduit l'expertise de Bob pour prédire le prix d'une voiture en fonction de son kilométrage. 📊
 
-## 🎯 Description
+## 🚗 Description
 
 Bob utilise une formule mathématique simple mais efficace :
 
