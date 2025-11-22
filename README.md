@@ -1,7 +1,4 @@
-<img src=https://github.com/monsieurCanard/42Graphics/blob/main/Abstract2.png>
-
-# ft_linear_regression 📉
-
+<!-- <img src=https://github.com/monsieurCanard/42Graphics/blob/main/Abstract2.png> -->
 ```
      _/       \_
     / |       | \
@@ -17,6 +14,9 @@
  ____|_________|____
 /                   \
 ```
+
+# ft_linear_regression 📉
+
 
 🚗💰 **Bob's Used Car Price Predictor**
 
@@ -163,7 +163,7 @@ Bob n'est pas votre vendeur de voitures ordinaire. Avec 20 ans d'expérience et 
 
 ## 📝 Exemple de Session
 
-```bash
+```
 $ python3 prog.py
 
 -- Welcome to FT Linear Regression Program --
