@@ -2,9 +2,8 @@ from trainer_model import train
 from predict_model import predict
 from verifyer_model import verify
 from interface_prog import prog_header, train_header, predict_header, verify_header
-
-
 import argparse
+import sys
 
 
 def init_argparser():
@@ -34,32 +33,12 @@ def init_argparser():
     return parser
 
 
-def main():
-    parser = init_argparser()
-    args = parser.parse_args()
-
-    match args:
-        case _ if args.train:
-            train()
-        case _ if args.verify:
-            accuracy = verify()
-            print(f"Model accuracy: {accuracy}%")
-        case _ if args.predict is not None:
-            predicted_price = predict(args.predict)
-            print(f"Predicted price for {args.predict} km: {predicted_price} ")
-        case _ if args.vizualize:
-            train(visualize=True)
-        case _:
-            run_all_steps()
-
-
 def run_all_steps():
     prog_header()
 
-    import sys
-
     line = sys.stdin.readline().strip()
     km = float(line)
+
     if km < 0:
         print("Error: Kilometers cannot be negative.")
         return
@@ -74,6 +53,29 @@ def run_all_steps():
     predicted_price = predict(km)
     predict_header(predicted_price)
     verify_header(verify(), predicted_price, km)
+
+
+def main():
+    parser = init_argparser()
+    args = parser.parse_args()
+
+    match args:
+        case _ if args.train:
+            train()
+
+        case _ if args.verify:
+            accuracy = verify()
+            print(f"Model accuracy: {accuracy}%")
+
+        case _ if args.predict is not None:
+            predicted_price = predict(args.predict)
+            print(f"Predicted price for {args.predict} km: {predicted_price} ")
+
+        case _ if args.vizualize:
+            train(visualize=True)
+
+        case _:
+            run_all_steps()
 
 
 if __name__ == "__main__":

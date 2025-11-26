@@ -1,13 +1,14 @@
-
 import os
 from time import sleep
 
+
 def clear_screen():
-  os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 def prog_header():
-  clear_screen()
-  print(r"""
+    clear_screen()
+    print(r"""
         
         -- Welcome to FT Linear Regression Program --
        -------
@@ -25,12 +26,13 @@ def prog_header():
  ____|_________|____
 /                   \
       """)
-  sleep(1)
-  return
+    sleep(1)
+    return
+
 
 def train_header():
     clear_screen()
-    print(r"""\
+    print(r"""
           
        -------   
      _/       \_
@@ -52,15 +54,18 @@ def train_header():
 
 def predict_header(final_price: float):
     clear_screen()
-    phrase = ["Je pourrais accepter… si je veux faire semblant d’avoir un cœur.",
-              "Pour ce prix, je devrais presque t’envoyer un message de condoléances.",
-              "Je te l’achète si tu me promets de ne jamais dire que tu avais des rêves.",
-              "C’est une voiture, pas un miracle, mais je suppose que tu fais ce que tu peux"]
+    phrase = [
+        "Je pourrais accepter… si je veux faire semblant d’avoir un cœur.",
+        "Pour ce prix, je devrais presque t’envoyer un message de condoléances.",
+        "Je te l’achète si tu me promets de ne jamais dire que tu avais des rêves.",
+        "C’est une voiture, pas un miracle, mais je suppose que tu fais ce que tu peux",
+    ]
 
     import random
+
     final_phrase = random.choice(phrase)
 
-    print(rf"""\
+    print(rf"""
 
        -------   
      _/       \_
@@ -79,9 +84,10 @@ def predict_header(final_price: float):
       """)
     sleep(5)
 
+
 def verify_header(accuracy: float, final_price: float, km: float):
-  clear_screen()
-  print(rf"""\
+    clear_screen()
+    print(rf"""\
                                              |
                                          |
                                          |
@@ -102,7 +108,7 @@ _ ||||||||| _ | | __ | | __ ||______|| __|
      /  __\          ____                     \
      \( oo          (___ \                     \
      _\_o/           oo~)/ <-- Bob a achete une voiture de {km} km pour {final_price} €
-    / \|/ \         _\-_/_     Il a raté de {accuracy}% ses estimations !
+    / \|/ \         _\-_/_     J'aime refait les tests et bob s'ecarte de {accuracy} % des vraies estimations !
    / / __\ \___    / \|/  \    C'est vraiment du super boulot ! Et c'est gratis !
    \ \|   |__/_)  / / .- \ \   
     \/_)  |       \ \ .  /_/ <-- Mais faudrait peut etre faire quelque chose
